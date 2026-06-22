@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Platform.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Coin.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/Flag.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/Spike.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id="7"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Sky" type="ColorRect" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.3, 0.32, 0.5, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+
+[node name="Start" parent="." instance=ExtResource("3")]
+position = Vector2(80, 460)
+width_tiles = 3
+
+[node name="S1" parent="." instance=ExtResource("3")]
+position = Vector2(260, 420)
+width_tiles = 2
+
+[node name="S2" parent="." instance=ExtResource("3")]
+position = Vector2(420, 470)
+width_tiles = 2
+
+[node name="S3" parent="." instance=ExtResource("3")]
+position = Vector2(600, 400)
+width_tiles = 2
+
+[node name="S4" parent="." instance=ExtResource("3")]
+position = Vector2(760, 320)
+width_tiles = 2
+
+[node name="S5" parent="." instance=ExtResource("3")]
+position = Vector2(900, 220)
+width_tiles = 2
+
+[node name="Coin1" parent="." instance=ExtResource("4")]
+position = Vector2(260, 370)
+
+[node name="Coin2" parent="." instance=ExtResource("4")]
+position = Vector2(600, 350)
+
+[node name="Coin3" parent="." instance=ExtResource("4")]
+position = Vector2(760, 270)
+
+[node name="Spike1" parent="." instance=ExtResource("6")]
+position = Vector2(610, 373)
+
+[node name="Enemy1" parent="." instance=ExtResource("7")]
+position = Vector2(420, 432)
+patrol_distance = 35.0
+
+[node name="Enemy2" parent="." instance=ExtResource("7")]
+position = Vector2(760, 272)
+patrol_distance = 35.0
+
+[node name="Flag" parent="." instance=ExtResource("5")]
+position = Vector2(900, 145)
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(80, 400)
+
+[node name="HUD" parent="." instance=ExtResource("2")]

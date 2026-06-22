@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g8mv7"]
+lightmap_size_hint = Vector2i(24, 36)
+add_uv2 = true
+size = Vector3(2, 2, 2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_yp1jg"]
+
+[node name="Node3D" type="Node3D" unique_id=123443641]
+
+[node name="BOX" type="MeshInstance3D" parent="." unique_id=869325319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061334014, 0, 0)
+mesh = SubResource("BoxMesh_g8mv7")
+
+[node name="BOX2" type="MeshInstance3D" parent="." unique_id=392385623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3610868, 0, 0)
+mesh = SubResource("SphereMesh_yp1jg")

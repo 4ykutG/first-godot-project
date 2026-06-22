@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Platform.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/Coin.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/Flag.tscn" id="5"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Sky" type="ColorRect" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0.53, 0.81, 0.92, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+
+[node name="Ground" parent="." instance=ExtResource("3")]
+position = Vector2(486, 513)
+width_tiles = 18
+
+[node name="Platform1" parent="." instance=ExtResource("3")]
+position = Vector2(260, 420)
+width_tiles = 3
+
+[node name="Platform2" parent="." instance=ExtResource("3")]
+position = Vector2(470, 360)
+width_tiles = 3
+
+[node name="Platform3" parent="." instance=ExtResource("3")]
+position = Vector2(680, 300)
+width_tiles = 3
+
+[node name="Platform4" parent="." instance=ExtResource("3")]
+position = Vector2(880, 240)
+width_tiles = 2
+
+[node name="Coin1" parent="." instance=ExtResource("4")]
+position = Vector2(150, 440)
+
+[node name="Coin2" parent="." instance=ExtResource("4")]
+position = Vector2(260, 370)
+
+[node name="Coin3" parent="." instance=ExtResource("4")]
+position = Vector2(470, 310)
+
+[node name="Coin4" parent="." instance=ExtResource("4")]
+position = Vector2(680, 250)
+
+[node name="Flag" parent="." instance=ExtResource("5")]
+position = Vector2(880, 165)
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(60, 440)
+
+[node name="HUD" parent="." instance=ExtResource("2")]
